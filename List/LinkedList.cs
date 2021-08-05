@@ -9,21 +9,24 @@ namespace List
         // variables
         internal Node head;
         /// <summary>
-        /// add element into reverse order.
+        /// add elements into linkedlist.
         /// </summary>
         /// <param name="data"></param>
-        internal void AddElementInReverse(int data)
+        internal void Add(int data)
         {
-            Node newNode = new Node(data);
+            Node node = new Node(data);
             if (this.head == null)
             {
-                this.head = newNode;
+                this.head = node;
             }
             else
             {
-                Node temp = this.head;
-                head = newNode;
-                head.next = temp;
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
         }
         /// <summary>

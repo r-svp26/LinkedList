@@ -7,11 +7,10 @@ namespace List
         static void Main(string[] args)
         {
             LinkedList linkedList = new LinkedList();
-            linkedList.AddElementInReverse(70);
-            linkedList.AddElementInReverse(30);
-            linkedList.AddElementInReverse(56);
+            linkedList.Add(56);
+            linkedList.Add(30);
+            linkedList.Add(70);
             linkedList.Display();
-
         }
     }
 }
