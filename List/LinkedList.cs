@@ -28,7 +28,6 @@ namespace List
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into Linked List", node.data);
         }
         /// <summary>
         /// display the elements of linkedlist.
@@ -43,9 +42,10 @@ namespace List
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + "->");
                 temp = temp.next;
             }
+            Console.Write("null");
         }
     }
 }
