@@ -48,35 +48,16 @@ namespace List
             Console.Write("null \n");
         }
         /// <summary>
-        /// insert element at specified postion in linkedlist.
+        /// remove the first element from linkedlist.
         /// </summary>
-        /// <param name="position"></param>
-        /// <param name="data"></param>
         /// <returns></returns>
-        internal Node InsertAtParticularPosition(int position, int data)
+        internal Node Pop()
         {
-            Node newestNode = new Node(data);
             if (this.head == null)
             {
-                return newestNode;
+                return null;
             }
-            if (position == 0)
-            {
-                newestNode.next = this.head;
-                this.head = newestNode;
-                return this.head;
-            }
-            Node prev = null;
-            Node current = this.head;
-            int count = 0;
-            while (current != null && count < position)
-            {
-                prev = current;
-                current = current.next;
-                count++;
-            }
-            newestNode.next = prev.next;
-            prev.next = newestNode;
+            this.head = this.head.next;
             return this.head;
         }
     }
